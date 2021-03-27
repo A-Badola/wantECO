@@ -33,7 +33,16 @@
       flex:1;
     }
   }
-
+  
+  i{
+    font-size: 1.8125rem;
+    margin-bottom: 1.8125rem;
+    @include breakpoint-up(large){
+      font-size: 2.8125rem;
+    margin-bottom: 2.8125rem;
+    }
+  }
+  
   &__icon{
     margin-bottom: 1.875rem;
     @include breakpoint-up(large){
