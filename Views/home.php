@@ -21,12 +21,22 @@
   <section class="hero">
     <div class="container" >
       <div class="hero__text container--pall">
-        <h1>
-          Live More Sustainably<br >Join our `name` community
-       </h1>
-       <p>
-          join over `number` people using ways to live more sustainably, talking about their daily eco-friendly and sustainable methods and options, inspiring each other and chatting about all things sustainable! 
-       </p>
+        <?php if(isset($_SESSION['id'])){ ?>
+          <h1>
+              Let's hold OUR WORLD in trust for OUR CHILDREN .
+          </h1>
+          <p>
+              Explore the community or Contribute to the communtiy of Sustainable Living 
+          </p>
+        <?php }else{   ?>
+          <h1>
+              Live More Sustainably<br >Join our wantECO community
+          </h1>
+          <p>
+              join over `number` people using ways to live more sustainably, talking about their daily eco-friendly and sustainable methods and options, inspiring each other and chatting about all things sustainable! 
+          </p>
+        <?php  }  ?>   
+
        <a href="#" class="button hero__cta">EXPLORE</a>
        <a href="#" class="button hero__cta">CONTRIBUTE</a>
       </div>
