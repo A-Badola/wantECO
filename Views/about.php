@@ -2,19 +2,20 @@
   <div class="slide-viewer">
     <div class="slide-group">
       <div class="slide slide-1">
-        <img src="img/slide-1.jpg" alt="1 slide" />
+        <img src="img/slide-1.jpg" width="100%" alt="1 slide" />
       </div>
       <div class="slide slide-2">
-        <img src="img/slide-2.jpg" alt="2 slide" />
+        <img src="img/slide-2.jpg" width="100%" alt="2 slide" />
       </div>
       <div class="slide slide-1">
-        <img src="img/slide-3.jpg" alt="3 slide" />
+        <img src="img/slide-3.jpg" width="100%" alt="3 slide" />
       </div>
       <div class="slide slide-1">
-        <img src="img/slide-4.jpg" alt="4 slide" />
+        <img src="img/slide-4.jpg" width="100%" alt="4 slide" />
       </div>
     </div>
   </div>
+<div class="slide-buttons"></div>
 </section>
 <div id="about">
 	<h2 class="text-center mt-4 text-secondary">ABOUT US</h2>
