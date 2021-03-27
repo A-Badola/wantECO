@@ -37,8 +37,8 @@
           </p>
         <?php  }  ?>   
 
-       <a href="#" class="button hero__cta">EXPLORE</a>
-       <a href="#" class="button hero__cta">CONTRIBUTE</a>
+       <a href="?page=explore" class="button hero__cta">EXPLORE</a>
+       <a href="?page=contribute" class="button hero__cta">CONTRIBUTE</a>
       </div>
     </div>
   </section>

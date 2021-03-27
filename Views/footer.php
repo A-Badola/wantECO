@@ -25,9 +25,10 @@
        <a href="#">Support</a>
        <a href="#">Privacy Policy</a>
      </div>
- 
      <div class="footer__cta">
+      <?php if(!(isset($_SESSION['id']))){ ?>
        <a href="#" class="button">join us</a>
+      <?php  }  ?>   
      </div>
      <div class="footer__copyright">
          &copy; (name). All Rights Reserved

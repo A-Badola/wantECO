@@ -88,7 +88,12 @@
         <?php  }  ?>   
       </div>
 
+      <?php if(isset($_SESSION['id'])){ ?>
+      <a href="?page=contribute" class="button header__cta hide-for-mobile ">My Pledges</a>
+        <?php }else{   ?>   
       <a href="?page=join" class="button header__cta hide-for-mobile ">Why Join</a>
+      <?php  }  ?>   
+
     </nav>
 
     <div class="header__menu has-fade">
