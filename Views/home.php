@@ -2,22 +2,22 @@
     <div class="slide-viewer">
       <div class="slide-group">
         <div class="slide slide-1">
-          <img src="img/slide-1.jpg" width="100%" alt="1 slide" />
+          <img src="img/slide-1.jpg" width="100%" height="120%" alt="1 slide" />
         </div>
         <div class="slide slide-2">
-          <img src="img/slide-2.jpg" width="100%" alt="2 slide" />
+          <img src="img/slide-2.jpg" width="100%" height="100%" alt="2 slide" />
         </div>
         <div class="slide slide-1">
-          <img src="img/slide-3.jpg" width="100%" alt="3 slide" />
+          <img src="img/slide-3.jpg" width="100%" height="100%" alt="3 slide" />
         </div>
         <div class="slide slide-1">
-          <img src="img/slide-4.jpg" width="100%" alt="4 slide" />
+          <img src="img/slide-4.jpg" width="100%" height="120%" alt="4 slide" />
         </div>
       </div>
     </div>
   </section>
   <!--- main part: for get and provide part -->
-  <div class="slide-buttons"></div>
+  <div class="slide-buttons bg-dark"></div>
   <section class="hero">
     <div class="container" >
       <div class="hero__text container--pall">
@@ -109,7 +109,7 @@
       <h2>Latest Articles</h2>
 
       <div class="article__grid">
-        <a href="#" class="article__item">
+        <a href="https://challenge.biomimicry.org/en/custom/gallery/view/29049" class="article__item">
           <div class="article__image" style="background-image: url('./img/img1.jpg')"></div>
           <div class="article__text">
             <div class="article__author">By Ace1</div>
@@ -117,7 +117,7 @@
             <div class="article__description">In todays commercial and consumerist world, human dependence on electricity and machines cannot be discounted. However, it is widely established that, not only do existing methods consume high amounts of energy...</div>
           </div>
         </a>
-        <a href="#" class="article__item">
+        <a href="https://www.feedingindia.org/" class="article__item">
           <div class="article__image" style="background-image: url('./img/img2.jpg')"></div>
           <div class="article__text">
             <div class="article__author">By Ace2</div>
@@ -128,7 +128,7 @@
           </div>
         </a>
 
-        <a href="#" class="article__item">
+        <a href="https://www.thebetterindia.com/224824/bengaluru-startup-innovation-technology-convert-sewage-to-reusable-water-sustainable-india-gop94/" class="article__item">
           <div class="article__image" style="background-image: url('./img/img3.jpg')"></div>
           <div class="article__text">
             <div class="article__author">By Ace3</div>
