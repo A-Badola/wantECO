@@ -107,4 +107,23 @@
         }
     }
 
+    if($_GET["process"]=="post"){
+        if(!$_POST['postContent']){
+            echo "Your Post is Empty !";
+        }else if(strlen($_POST['postContent'])>2500){
+            echo "Your Post is too long !";
+        }else if(!$_POST["category"]){
+            echo "A Category is required. ";
+        }else{
+            $insertion= " INSERT INTO `posts` (`post`,`userid`,`category`) VALUES ('".mysqli_real_escape_string($link,$_POST['postContent'])."',".mysqli_real_escape_string($link,$_SESSION['id']).",'".mysqli_real_escape_string($link,$_POST['category'])."')";
+            if(mysqli_query($link,$insertion))
+                echo 1;
+            else{
+                echo 0;
+            }
+        }
+    }
+
+    
+
 ?>
