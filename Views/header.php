@@ -18,6 +18,9 @@
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
   <script src="fontawesome/js/all.js"></script>
   <style>
+    html{
+      scroll-behavior: smooth;
+    }
     .input-field {
         max-width: 380px;
         width: 100%;
@@ -67,11 +70,7 @@
     <div class="overlay has-fade"></div>
 
     <nav class="container container--pall flex flex-jc-sb flex-ai-c">
-      <form class="header__form" action="">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <input type="search" name="search" id="site-search" />
-        <input type="submit" value="search" id="submitSearch" />
-      </form>
+      <img src="img/logo.jpeg" width="100px" onclick="{window.location.href='index.php'}" style="cursor: pointer;">
       <!--- menu for responsive(mobile) -->
       <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
         <span></span> 
@@ -124,12 +123,12 @@
                             <div class="alert alert-danger alerts" type="alert" id="alert-login"></div>
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
-                                <input type="text" name="userIn" id="userIn" class="form-control"
+                                <input type="text" name="userIn" id="userIn" class="form-control my-auto"
                                     placeholder="Email or Username " aria-describedby="helpId">
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" class="form-control" name="passwordIn" id="passwordIn"
+                                <input type="password" class="my-auto form-control" name="passwordIn" id="passwordIn"
                                     placeholder="Password">
                             </div>
 
@@ -163,18 +162,18 @@
                             <div class="alert alert-danger alerts" type="alert" id="alert-signup"></div>
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
-                                <input type="text" class="form-control" name="usernameUp" id="usernameUp" placeholder="Enter Username here" autofill="off">
+                                <input type="text" class="form-control my-auto" name="usernameUp" id="usernameUp" placeholder="Enter Username here" autofill="off">
                             </div>
                             <div class="alert alert-warning alerts" type="alert" id="alert-already-exists"></div>
                             <div class="alert alert-success alerts" type="alert" id="alert-available"></div>
                             <div class="input-field">
                                 <i class="fas fa-envelope"></i>
-                                <input type="email" name="emailUp" id="emailUp" class="form-control"
+                                <input type="email" name="emailUp" id="emailUp" class="form-control my-auto"
                                     placeholder="Enter email ID here" aria-describedby="helpId">
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" class="form-control" name="passwordUp" id="passwordUp"
+                                <input type="password" class="form-control my-auto" name="passwordUp" id="passwordUp"
                                     placeholder="Password">
                             </div>
 
