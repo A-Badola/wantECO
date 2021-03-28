@@ -16,4 +16,31 @@
     }
   }
 
+  function displayCategory(){
+    echo '<form><div class="input-group">
+        <input type="hidden" name="page" value="post">
+        <input type="text" name="query" class="form-control" id="seaarch" size="100px" placeholder="Search Posts">  
+   
+       <div class="input-group-btn">
+           <div>
+               <button type="submit" class="btn">&#128269;</button>
+           </div>      
+       </div>
+    </div>
+   </form>';
+  }
+
+  function displayPostBox(){
+    echo '         
+          <div id="postSuccess" class="alert alert-success alerts">
+            Your Post was Posted Successfully
+          </div>
+          <div id="postFail" class="alert alert-danger alerts">
+          </div>
+          <textarea class="form-control" id="postContent"></textarea>
+          <div class="input-group-btn">
+            <button class="btn btn-primary" id="postButton">Post</button>
+          </div>
+        ';
+  }
 ?>

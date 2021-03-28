@@ -77,4 +77,34 @@
                 echo 1;
             }
     }
+
+    if($_GET["process"]=="update"){
+        $existCheck="SELECT `userid` FROM `details` WHERE `userId` = '".mysqli_real_escape_string($link,$_SESSION['id'])."' LIMIT 1";
+        if(mysqli_num_rows(mysqli_query($link,$existCheck))>0){
+            $updatingInfo="UPDATE `details`
+                SET `went`='".mysqli_real_escape_string($link,$_POST['went'])."',
+                    `worked`='".mysqli_real_escape_string($link,$_POST['worked'])."',
+                    `lives`='".mysqli_real_escape_string($link,$_POST['lives'])."',
+                    `belong`='".mysqli_real_escape_string($link,$_POST['belong'])."'
+                WHERE `userid`='".mysqli_real_escape_string($link,$_SESSION['id'])."'";
+            if($resultInfo=mysqli_query($link,$updatingInfo)){
+                echo 1; 
+            }else{
+                echo "Can't submit Info right now .. Please try again later. ";
+            }
+        }else{
+            $insertingInfo="INSERT into `details` (`userid`,`went`,`worked`,`lives`,`belong`) 
+            VALUES ( '".mysqli_real_escape_string($link,$_SESSION['id'])."',
+                     '".mysqli_real_escape_string($link,$_POST['went'])."',
+                     '".mysqli_real_escape_string($link,$_POST['worked'])."',
+                     '".mysqli_real_escape_string($link,$_POST['lives'])."',
+                     '".mysqli_real_escape_string($link,$_POST['belong'])."')";
+            if(mysqli_query($link,$insertingInfo)){
+                echo 1; 
+            }else{
+                echo "Can't submit Info right now .. Please try again later. ";
+            }
+        }
+    }
+
 ?>
