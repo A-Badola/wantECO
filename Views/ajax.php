@@ -84,6 +84,26 @@
             });
             $("#submited").hide();
         });   
+
+
+        // Posting action 
+        $("#postButton").click(function(){
+            $.ajax({
+                type: "POST",
+                url : "http://localhost/wantECO/actions.php?process=post",
+                data: "postContent=" + $("#postContent").val() +"&category="+$("#category").val(),
+                success: function(result){
+                    if(result==1){
+                        $("#postSuccess").show();
+                        $("#postFail").hide();
+                        window.location.assign("http://localhost/wantECO/?page=contribute");
+                    }else if(result!=""){
+                        $("#postFail").html(result).show();
+                        $("postSuccess").hide();
+                    }
+                }
+            })
+        });
         
 </script>
 

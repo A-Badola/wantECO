@@ -2,16 +2,16 @@
     <div class="slide-viewer">
       <div class="slide-group">
         <div class="slide slide-1">
-          <img src="img/slide-1.jpg" width="100%" alt="1 slide" />
+          <img src="img/slide-1.jpg" width="100%" height="120%" alt="1 slide" />
         </div>
         <div class="slide slide-2">
-          <img src="img/slide-2.jpg" width="100%" alt="2 slide" />
+          <img src="img/slide-2.jpg" width="100%" height="100%" alt="2 slide" />
         </div>
         <div class="slide slide-1">
-          <img src="img/slide-3.jpg" width="100%" alt="3 slide" />
+          <img src="img/slide-3.jpg" width="100%" height="100%" alt="3 slide" />
         </div>
         <div class="slide slide-1">
-          <img src="img/slide-4.jpg" width="100%" alt="4 slide" />
+          <img src="img/slide-4.jpg" width="100%" height="120%" alt="4 slide" />
         </div>
       </div>
     </div>

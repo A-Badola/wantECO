@@ -31,7 +31,7 @@
       <?php  }  ?>   
      </div>
      <div class="footer__copyright">
-         &copy; (name). All Rights Reserved
+         &copy; wantECO . All Rights Reserved
      </div>
     </div>
   </footer>

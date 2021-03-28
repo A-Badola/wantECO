@@ -20,9 +20,9 @@
 <div id="about">
 	<h2 class="text-center mt-4 text-secondary">ABOUT US</h2>
 	<div class="container mb-5">
-		<h5 class="mb-4">Welcome to ecoWant</h5>
+		<h5 class="mb-4">Welcome to wantECO</h5>
 		<p class="text-justify mb-3">
-			We, the team of ecoWant have created an online platform where everyone who want to lead an eco friendly and sustainable life, but don’t know how to and all who have created eco friendly and sustainable options but they don’t have a platform to make everyone aware about it can meet and get aware of each other and hence help in sustainable development.
+			We, the team of wantECO have created an online platform where everyone who want to lead an eco friendly and sustainable life, but don’t know how to and all who have created eco friendly and sustainable options but they don’t have a platform to make everyone aware about it can meet and get aware of each other and hence help in sustainable development.
 		</p>
 		<p class="text-justify mb-3">
 			Currently we are a team of four but slowly it will get bigger and bigger and we will become a team of people all over the world who would be learning and teaching everyday to save our amazing planet Earth and its life.
