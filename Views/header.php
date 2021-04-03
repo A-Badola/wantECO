@@ -96,6 +96,10 @@
         font-size: 16px;
         font-weight: 900;
     }
+    .green{
+  color: darkgreen;
+  font-weight:600;
+}
 
     .post{
             border:0.3vw solid #BC36B2;
@@ -122,8 +126,8 @@
         <span></span>
       </a>
 
-      <div class="header__links hide-for-mobile ">
-        <a href="?page=about">About us</a>
+      <div class="header__links hide-for-mobile">
+        <a href="?page=about"> About us</a>
         <?php if(isset($_SESSION['id'])){ ?>
           <a href="?process=logout">Log Out</a>
         <?php }else{   ?>
@@ -168,7 +172,7 @@
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
                                 <input type="text" name="userIn" id="userIn" class="form-control my-auto"
-                                    placeholder="Email or Username " aria-describedby="helpId">
+                                    placeholder="Email or Username " autocomplete="off" aria-describedby="helpId">
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
@@ -206,13 +210,13 @@
                             <div class="alert alert-danger alerts" type="alert" id="alert-signup"></div>
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
-                                <input type="text" class="form-control my-auto" name="usernameUp" id="usernameUp" placeholder="Enter Username here" autofill="off">
+                                <input type="text"  autocomplete="off" class="form-control my-auto" name="usernameUp" id="usernameUp" placeholder="Enter Username here" autofill="off">
                             </div>
                             <div class="alert alert-warning alerts" type="alert" id="alert-already-exists"></div>
                             <div class="alert alert-success alerts" type="alert" id="alert-available"></div>
                             <div class="input-field">
                                 <i class="fas fa-envelope"></i>
-                                <input type="email" name="emailUp" id="emailUp" class="form-control my-auto"
+                                <input type="email"  autocomplete="off" name="emailUp" id="emailUp" class="form-control my-auto"
                                     placeholder="Enter email ID here" aria-describedby="helpId">
                             </div>
                             <div class="input-field">

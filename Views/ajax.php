@@ -91,7 +91,7 @@
             $.ajax({
                 type: "POST",
                 url : "http://localhost/wantECO/actions.php?process=post",
-                data: "postContent=" + $("#postContent").val() +"&category="+$("#category").val(),
+                data: "postContent=" + $("#postContent").val() +"&category="+$("#category").val() +"&title="+$("#title").val(),
                 success: function(result){
                     if(result==1){
                         $("#postSuccess").show();
@@ -104,6 +104,26 @@
                 }
             })
         });
+
+        // Pledging Action
+        $("#pledge").click(function(){
+            $.ajax({
+                type: "POST",
+                url : "http://localhost/wantECO/actions.php?process=pledge",
+                data: "postid=" + $("#pledge").val(),
+                success: function(result){
+                    alert(result);
+                    // if(result==1){
+                        
+                    //     window.location.assign("http://localhost/wantECO/?page=contribute");
+                    // }else if(result!=""){
+                        
+                    // }
+                }
+            })
+        });
+
+
         
 </script>
 

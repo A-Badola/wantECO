@@ -54,7 +54,7 @@
         <!-- Make an input field with background same as parent div so that it appears like it's not there -->
         <div class="card visible-md-block visible-lg-block mb-4">
           <div class="card-block">
-            <h6 class="mb-3 black">About <small>· <span id="edit" style="color:blue; cursor:pointer">Edit</span></small></h6>
+            <h6 class="m-3 black">About <small>· <span id="edit" style="color:blue; cursor:pointer">Edit</span></small></h6>
             <ul class="list-unstyled list-spaced">
               <li class="edit"><span class="text-muted icon icon-calendar mr-3 "></span><span style="font-weight:400;">Went to </span><input type="text" id="first" class="black" size="12" value="<?php 
                                         if($went==""){
@@ -68,16 +68,16 @@
               <li class="edit"><span class="text-muted icon icon-home mr-3 "></span><span style="font-weight:400;">Lives in </span><input type="text" id="lives" class="black" value="<?php if($lives==""){ echo "Eco Academy"; } else { echo $lives; } ?>" size="12" disabled ></li>
               <li class="edit"><span class="text-muted icon icon-location-pin mr-3 "></span><span style="font-weight:400;">From </span><input type="text" id="belong" class="black" value="<?php if($belong==""){ echo "Eco Academy"; } else { echo $belong; } ?>" size="12" disabled ></li>
             </ul>
-            <span id="submited" style="color:blue;cursor:pointer;">Submit</span>
+            <span id="submited" class="m-3" style="color:blue;cursor:pointer;">Submit</span>
           </div>
+         </div>
           <div class="card visible-md-block visible-lg-block">
           <div class="card-block">
-            <h6 class="mb-3 black">Your Posts</h6>
+            <h6 class="m-3 black">Your Posts</h6>
             <!-- <div data-grid="images" data-target-height="150"> -->
                 <?php displayPosts("yourPosts"); ?>
-            
           </div>
-        </div>
+        <!-- </div> -->
 
         </div>
       </div>
@@ -86,10 +86,12 @@
           <li class="media list-group-item p-4">
           <form>
             <div class="input-group">
-              <input type="hidden" name="page" value="post">
-              <input type="text" name="category" class="form-control" id="category" size="100px" placeholder="Category">  
+              <input type="text" name="title" class="form-control" autocomplete="off" id="title" size="100px" placeholder="Title">
             </div>
-            <div id="postSuccess " class="alert alert-success alerts">
+            <div class="input-group">
+              <input type="text" name="category" class="form-control" autocomplete="off" id="category" size="100px" placeholder="Category">  
+            </div>
+            <div id="postSuccess" class="alert alert-success alerts">
               Your Post was Posted Successfully
             </div>
             <div id="postFail" class="alert alert-danger alerts">
@@ -108,7 +110,7 @@
                     displayPosts($_GET['userid']); 
                 }
             ?>
-                    <hr style="color:#BC36B2;">
+            <hr style="color:#BC36B2;">
             <h2 style="color:#a9a9a9;">Recent Posts</h2>
             <!-- <hr style="color:#BC36B2;"> -->
             <?php displayPosts("public"); ?> 
@@ -120,14 +122,15 @@
       <div class="col-md-3 container-outer">
         <div class="card mb-4 hidden-md-down">
           <div class="card-block">
-            <h6 class="mb-3">Sponsored</h6>
-            <div data-grid="images" data-target-height="150">
+            <div class="card-header profile"></div>
+            <h6 class="m-3 black bold">Your Pledges</h6>
+            <!-- <div data-grid="images" data-target-height="150">
                 <img class="media-object" data-width="640" data-height="640" data-action="zoom"
                 src="assets/img/sponsor.jpg">
-            </div>
-            <p><strong>It might be time to visit Iceland.</strong> Iceland is so chill, and everything looks cool here.
+            </div> -->
+            <!-- <p><strong>It might be time to visit Iceland.</strong> Iceland is so chill, and everything looks cool here.
               Also, we heard the people are pretty nice. What are you waiting for?</p>
-            <a href="https://www.skyscanner.co.in/flights-to/is/cheap-flights-to-iceland.html" target="_blank"><button class="btn btn-outline-primary btn-sm">Buy a ticket</button></a>
+            <a href="https://www.skyscanner.co.in/flights-to/is/cheap-flights-to-iceland.html" target="_blank"><button class="btn btn-outline-primary btn-sm">Buy a ticket</button></a> -->
           </div>
         </div>
       </div>

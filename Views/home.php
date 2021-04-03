@@ -33,7 +33,7 @@
               Live More Sustainably<br >Join our wantECO community
           </h1>
           <p>
-              join over `number` people using ways to live more sustainably, talking about their daily eco-friendly and sustainable methods and options, inspiring each other and chatting about all things sustainable! 
+              join over 1000 people using ways to live more sustainably, talking about their daily eco-friendly and sustainable methods and options, inspiring each other and chatting about all things sustainable! 
           </p>
         <?php  }  ?>   
 
