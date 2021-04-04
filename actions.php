@@ -107,4 +107,34 @@
         }
     }
 
+    if($_GET["process"]=="post"){
+        if(!$_POST['postContent']){
+            echo "Your Post is Empty !";
+        }else if(strlen($_POST['postContent'])>2500){
+            echo "Your Post is too long !";
+        }else if(!$_POST["category"]){
+            echo "A Category is required. ";
+        }else if(!$_POST["title"]){
+            echo "A Title is required. ";
+        }else{
+            $insertion= " INSERT INTO `posts` (`post`,`userid`,`title`,`category`) VALUES ('".mysqli_real_escape_string($link,$_POST['postContent'])."',".mysqli_real_escape_string($link,$_SESSION['id']).",'".mysqli_real_escape_string($link,$_POST['title'])."','".mysqli_real_escape_string($link,$_POST['category'])."')";
+            if(mysqli_query($link,$insertion))
+                echo 1;
+            else{
+                echo 0;
+            }
+        }
+    }
+
+    if($_GET["process"]=="pledge"){
+        $insertion= " INSERT INTO `pledge` (`userid`,`postid`) VALUES (".mysqli_real_escape_string($link,$_SESSION['id']).",".mysqli_real_escape_string($link,$_POST['postid']).")";
+        if(mysqli_query($link,$insertion))
+            echo 1;
+        else{
+            echo 0;
+        }
+    }
+
+    
+
 ?>

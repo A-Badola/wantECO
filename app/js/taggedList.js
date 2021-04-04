@@ -30,6 +30,6 @@
     }).appendTo($buttons);
    });
    
-   $links.filter(tagged['popular']).show();
+   $links.show();
 }());
 
