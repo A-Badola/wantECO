@@ -30,7 +30,20 @@
         <!-- <a href="" class="serviceDesc" data-tags="waste-management,recycle,popular"><h3>DumpIn</h3><p>We are leading firm in Recycling Sector prooviding different services to our clients...</p></a> -->
 
           <?php while($row=$result->fetch_assoc()){ ?>
-            <a href="" class="serviceDesc" data-tags="<?php echo $row['category']; ?>"><h3><?php echo $row['category']; ?></h3><p><?php echo $row['post']; ?></p></a>
+            <a href="" class="container my-2" data-tags="<?php echo $row['category']; ?>">
+              <li class='media list-group-item p-4'>
+              <img class='media-object d-flex align-self-start mr-3' width='80px' height='80px' style='border-radius:50%; float:left;' src='img/profile.png'>
+              <div class='media-body'>
+                <div class='media-heading'>
+                  <h6 style='color:blueviolet;'><b><?php echo $row['title']; ?></b></h6>
+                </div>  
+                <p class='brown'><?php echo $row['post']; ?></p> 
+                <p class='green'><i>#<?php echo str_replace(',', ' #', str_replace(' ', '', $row['category'])) ?></i>
+                <button class='py-2 button header__cta float-right' value="<?php echo $row['id'] ?>" id='pledge'>Pledge</button></p>
+                <p><small class='float-left text-muted'><?php echo time_since(time()-strtotime($row['datetime'])+12600) ?> ago</small></p>
+              </div>
+              </li>
+            </a>
           <?php } ?>
         </div>
     </div>

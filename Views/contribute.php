@@ -53,29 +53,51 @@
 
         <!-- Make an input field with background same as parent div so that it appears like it's not there -->
         <div class="card visible-md-block visible-lg-block mb-4">
-          <div class="card-block">
+          <div class="card-block pb-3">
             <h6 class="m-3 black">About <small>· <span id="edit" style="color:blue; cursor:pointer">Edit</span></small></h6>
             <ul class="list-unstyled list-spaced">
-              <li class="edit"><span class="text-muted icon icon-calendar mr-3 "></span><span style="font-weight:400;">Went to </span><input type="text" id="first" class="black" size="12" value="<?php 
-                                        if($went==""){
-                                            echo "Eco Academy"; 
-                                        } else { 
-                                            echo $went; 
-                                        } ?>" disabled >
-                </li>
+              <li class="edit"><span class="ml-3" style="font-weight:400; font-size: 12px;">Went to </span><br>
+                <input type="text" 
+                       id="first"
+                       style="font-size: 17px; width: 80%;"
+                       class="black ml-4"
+                       value="<?php if($went=="")echo ""; else echo $went; ?>" 
+                       disabled >
+              </li>
               <!-- <li class="edit"><span class="text-muted icon icon-users mr-3 "></span>Became friends with -->
-              <li class="edit"><span class="text-muted icon icon-briefcase mr-3 "></span><span style="font-weight:400;">Worked at </span><input type="text" id="worked" class="black" value="<?php if($worked==""){ echo "Eco Academy"; } else { echo $worked; } ?>" size="12" disabled ></li>
-              <li class="edit"><span class="text-muted icon icon-home mr-3 "></span><span style="font-weight:400;">Lives in </span><input type="text" id="lives" class="black" value="<?php if($lives==""){ echo "Eco Academy"; } else { echo $lives; } ?>" size="12" disabled ></li>
-              <li class="edit"><span class="text-muted icon icon-location-pin mr-3 "></span><span style="font-weight:400;">From </span><input type="text" id="belong" class="black" value="<?php if($belong==""){ echo "Eco Academy"; } else { echo $belong; } ?>" size="12" disabled ></li>
+              <li class="edit"><span class="ml-3" style="font-weight:400; font-size: 12px;">Worked at </span><br>
+                <input type="text" 
+                       id="worked" 
+                       style="font-size: 17px; width: 80%;"
+                       class="black ml-4" 
+                       value="<?php if($worked=="") echo ""; else  echo $worked; ?>"
+                       disabled >
+              </li>
+              <li class="edit"><span class="ml-3" style="font-weight:400; font-size: 12px;">Lives in </span><br>
+                <input type="text" 
+                       id="lives" 
+                       style="font-size: 17px; width: 80%;"
+                       class="black ml-4" 
+                       value="<?php if($lives=="") echo "";  else echo $lives; ?>" 
+                       disabled >
+              </li>
+              <li class="edit"><span class="ml-3" style="font-weight:400; font-size: 12px;">From </span><br>
+                <input type="text" 
+                       id="belong" 
+                       style="font-size: 17px; width: 80%;"
+                       class="black ml-4" 
+                       value="<?php if($belong=="") echo "";  else echo $belong; ?>"
+                       disabled >
+              </li>
             </ul>
-            <span id="submited" class="m-3" style="color:blue;cursor:pointer;">Submit</span>
+            <span id="submited" class="m-3" style="color:blue;cursor:pointer;font-size:14px;">Submit</span>
           </div>
          </div>
           <div class="card visible-md-block visible-lg-block">
           <div class="card-block">
             <h6 class="m-3 black">Your Posts</h6>
             <!-- <div data-grid="images" data-target-height="150"> -->
-                <?php displayPosts("yourPosts"); ?>
+                <?php //displayPosts("yourPosts"); ?>
           </div>
         <!-- </div> -->
 
@@ -89,7 +111,7 @@
               <input type="text" name="title" class="form-control" autocomplete="off" id="title" size="100px" placeholder="Title">
             </div>
             <div class="input-group">
-              <input type="text" name="category" class="form-control" autocomplete="off" id="category" size="100px" placeholder="Category">  
+              <input type="text" name="category" class="form-control" autocomplete="off" id="category" size="100px" placeholder="Category (Ex: Water, air-purity)">  
             </div>
             <div id="postSuccess" class="alert alert-success alerts">
               Your Post was Posted Successfully
@@ -111,9 +133,9 @@
                 }
             ?>
             <hr style="color:#BC36B2;">
-            <h2 style="color:#a9a9a9;">Recent Posts</h2>
+            <h2 style="color:#a9a9a9;">Your Posts</h2>
             <!-- <hr style="color:#BC36B2;"> -->
-            <?php displayPosts("public"); ?> 
+            <?php displayPosts("yourPosts"); ?> 
 
           </li>
         </ul>

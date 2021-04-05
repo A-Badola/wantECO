@@ -82,6 +82,7 @@
                     }
                 }
             });
+            $('.edit input').attr('disabled',true);
             $("#submited").hide();
         });   
 
