@@ -26,7 +26,7 @@
     @include breakpoint-up(large){
       grid-template-columns: repeat(5,1fr);
     }
-    button{
+    button:not(#pledge){
       font-size: 0.725rem;
       text-align: center;
       margin: 0px 5px;
@@ -41,13 +41,13 @@
     }
     }
 
-    button:active{
+    button:not(#pledge):active{
       transition: border 5000ms ease-in-out;
       border: 4px solid $darkBlue;
       font-size: 1rem;
     }
 
-    button:hover{
+    button:not(#pledge):hover{
       transition: border 300ms ease-in-out;
       border: 4px solid $darkBlue;
     }
@@ -58,16 +58,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    a{
-      background-color: $veryLightGray;
-      border-bottom: 3px solid $darkBlue;
-      margin: 10px 10px;
-    }
-
-    a:hover{
-      transition: border-bottom 300ms ease-in-out;
-      border-bottom: 7px solid $darkBlue;
-    }
 
   }
 }

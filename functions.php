@@ -89,29 +89,29 @@
                     continue;
                 }
                 
-                if($type=="yourPosts"){
-                    echo "<div class='media-body'>
-                    <div class='media-heading'>
-                        <small class='float-right text-muted mr-2'>".time_since(time()-strtotime($row['datetime'])+12600)." ago</small>
-                    </div>
+                // if($type=="yourPosts"){
+                //     echo "<div class='media-body'>
+                //     <div class='media-heading'>
+                //         <small class='float-right text-muted mr-2'>".time_since(time()-strtotime($row['datetime'])+12600)." ago</small>
+                //     </div>
                 
-                <p class='brown ml-2'>".$row['post']." 
-                     <span class='green'><i>#".$row['category']."</i></span></p> 
-                <hr style='color:#a9a9a9;'>";
+                // <p class='brown ml-2'>".$row['post']." 
+                //      <span class='green'><i>#".$row['category']."</i></span></p> 
+                // <hr style='color:#a9a9a9;'>";
 
-                    echo "</div>";
-                    continue;
-                }
+                //     echo "</div>";
+                //     continue;
+                // }
                 echo "<li class='media list-group-item p-4'>
                     <img class='media-object d-flex align-self-start mr-3' width='80px' height='80px' style='border-radius:50%; float:left;' src='img/profile.png'>
                     <div class='media-body'>
                         <div class='media-heading'>
                             <h6 style='color:blueviolet;'><b>".$row['title']."</b>
-                            <span  class='float-right' style='color:blueviolet;'><a href='http://localhost/wantECO/?page=contribute&userid=".$user['id']."'>".$user['username']."</a></span></h6>
-    	                        </div>  
+                            </h6>
+    	                </div>  
                         <p class='brown'>".$row['post']."</p> 
-                        <p class='green'><i>#".$row['category']."</i>
-                        <button class='button header__cta float-right' value=".$row['id']." id='pledge'>Pledge</button></p>
+                        <p class='green'><i>#".str_replace(',', ' #', str_replace(' ', '', $row['category']))."</i>
+                        <button class='py-2 button header__cta float-right' value=".$row['id']." id='pledge'>Pledge</button></p>
                         <p><small class='float-left text-muted'>".time_since(time()-strtotime($row['datetime'])+12600)." ago</small></p>
                     </div>
                     </li> ";    
