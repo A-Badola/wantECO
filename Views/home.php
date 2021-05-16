@@ -17,7 +17,7 @@
     </div>
   </section>
   <!--- main part: for get and provide part -->
-  <div class="slide-buttons bg-dark"></div>
+  <div style="line-height: 1;" class="slide-buttons bg-dark"></div>
   <section class="hero">
     <div class="container" >
       <div class="hero__text container--pall">

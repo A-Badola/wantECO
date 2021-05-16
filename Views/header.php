@@ -23,6 +23,7 @@
 </head>
 <body>
   <!-- header -->
+  <div id="load"></div>
   <header class="header">
     <div class="overlay has-fade"></div>
 
@@ -36,6 +37,7 @@
       </a>
 
       <div class="header__links hide-for-mobile">
+        <a href="/wantECO/"> Home</a>
         <a href="?page=about"> About us</a>
         <?php if(isset($_SESSION['id'])){ ?>
           <a href="?process=logout">Log Out</a>
@@ -46,7 +48,9 @@
       </div>
 
       <?php if(isset($_SESSION['id'])){ ?>
-      <a href="?page=contribute" class="button header__cta hide-for-mobile ">My Pledges</a>
+      <a href="?page=contribute" class="header__cta hide-for-mobile ">
+        <i class="user-ico fas fa-2x fa-user-circle"></i>
+      </a>
         <?php }else{   ?>   
       <a href="?page=join" class="button header__cta hide-for-mobile ">Why Join</a>
       <?php  }  ?>   
@@ -70,7 +74,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="loginModalTitleIn">Log In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" 
+                            style="background: none;" 
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -93,7 +101,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a data-toggle="modal" data-target="#signup-modal" data-dismiss="modal" href="#">Sign Up Instead</a>
+                    <a data-toggle="modal" data-target="#signup-modal" data-dismiss="modal" href="#">
+                      <span style="font-size: 13px; margin-right: 13px;">Sign Up Instead</span>
+                    </a>
                     <button type="submit" class="btn btn-primary" id="buttonIn">Log In</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
@@ -109,7 +119,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Sign Up</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" 
+                            style="background: none;" 
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -138,7 +152,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a data-toggle="modal" data-target="#login-modal" data-dismiss="modal" href="#">Log In Instead</a>
+                    <a data-toggle="modal" data-target="#login-modal" data-dismiss="modal" href="#">
+                      <span style="font-size: 13px; margin-right: 13px;">Log In Instead</span>
+                    </a>
                       <button type="submit" class="btn btn-primary" id="buttonUp">Sign Up</button>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>

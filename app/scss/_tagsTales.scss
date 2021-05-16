@@ -8,15 +8,16 @@
   @include breakpoint-up(large){
     padding: 30px 30px;
   }
+  #searchTags::-webkit-scrollbar{
+    display: none;
+  }
   #searchTags{
     width: 100%;
     padding: 5px 0px;
-    @include breakpoint-up(large){
-      margin: 0px 10px;
-    }
-    display:grid;
+    white-space: nowrap;
+    scrollbar-width: none;
+    overflow-x: scroll;
     grid-template-columns:repeat(2, 1fr);
-    gap:1.875rem;
     align-items: left;
     margin: 10px 100px;
     @include breakpoint-up(medium){
@@ -26,14 +27,13 @@
     @include breakpoint-up(large){
       grid-template-columns: repeat(5,1fr);
     }
-    button:not(#pledge){
+    button:not(#pledge){ 
+      width: max-content;
       font-size: 0.725rem;
       text-align: center;
       margin: 0px 5px;
-      background-image: linear-gradient(to bottom, $white,$lightGrayishBlue);
+      background: #d5d5d5;
       color:$darkBlue;
-      border: 3px solid $darkBlue;
-      border-radius: 0;
       @include breakpoint-up(large){
         font-size: 0.825rem;
         margin: 0px 10px;
@@ -42,14 +42,11 @@
     }
 
     button:not(#pledge):active{
-      transition: border 5000ms ease-in-out;
-      border: 4px solid $darkBlue;
       font-size: 1rem;
     }
 
     button:not(#pledge):hover{
       transition: border 300ms ease-in-out;
-      border: 4px solid $darkBlue;
     }
 
   &__tagnames{

@@ -93,20 +93,12 @@
             <span id="submited" class="m-3" style="color:blue;cursor:pointer;font-size:14px;">Submit</span>
           </div>
          </div>
-          <div class="card visible-md-block visible-lg-block">
-          <div class="card-block">
-            <h6 class="m-3 black">Your Posts</h6>
-            <!-- <div data-grid="images" data-target-height="150"> -->
-                <?php //displayPosts("yourPosts"); ?>
-          </div>
-        <!-- </div> -->
-
-        </div>
+          
       </div>
       <div class="col-md-6 container-outer">
         <ul class="list-group media-list media-list-stream mb-4">   
           <li class="media list-group-item p-4">
-          <form>
+          <form method="post" action="">
             <div class="input-group">
               <input type="text" name="title" class="form-control" autocomplete="off" id="title" size="100px" placeholder="Title">
             </div>
@@ -117,6 +109,7 @@
               Your Post was Posted Successfully
             </div>
             <div id="postFail" class="alert alert-danger alerts">
+              Some problem occured
             </div>
             <textarea class="form-control mt-3" id="postContent"></textarea>
             <div class="input-group-btn">

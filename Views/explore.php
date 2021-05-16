@@ -25,7 +25,27 @@
   </section>
   <!--- Adding section for Tags and Tales(Kill me for this)-->
   <section class="tagsTale">
-    <div id="searchTags"></div>
+    <div id="searchTags" class="container">
+      <div class="rl-btns">
+        <button class="slide-d-btn-l" onclick="sideScroll(this.parentElement.parentElement,'left',25,200,20)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slide-d-btn-r" onclick="sideScroll(this.parentElement.parentElement,'right',25,200,20)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <button href="#serviceList" 
+              class="active-btn" 
+              onclick="{
+                        $('#serviceList a').show(); 
+                        $(this).addClass('active-btn').siblings().removeClass('active-btn');
+                        window.location.href='#serviceList';
+                        }">
+      Show All
+      </button>
+
+
+    </div>
         <div class="tagsTale__tagnames" id="serviceList">
         <!-- <a href="" class="serviceDesc" data-tags="waste-management,recycle,popular"><h3>DumpIn</h3><p>We are leading firm in Recycling Sector prooviding different services to our clients...</p></a> -->
 
@@ -46,5 +66,4 @@
             </a>
           <?php } ?>
         </div>
-    </div>
   </section>
