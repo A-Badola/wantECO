@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-<div class="slide-buttons bg-dark"></div>
+<div style="line-height: 1;" class="slide-buttons bg-dark"></div>
 </section>
 <div id="about">
 	<h2 class="text-center mt-4 text-secondary">ABOUT US</h2>

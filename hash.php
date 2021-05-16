@@ -1,6 +1,6 @@
 <?php
     $host="localhost";
-    $userName="amar";
-    $password="webadvisor@0401";
+    $userName="phpmyadmin";
+    $password="GodIsNo-1";
     $dbName="eco"; 
 ?>

@@ -1,3 +1,15 @@
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.hide();
+       document.getElementById('load').style.visibility="visible";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('load').style.visibility="hidden";
+      },1000);
+  }
+}
+
 const btnHamburger=document.querySelector('#btnHamburger');
 const body=document.querySelector('body');
 const header = document.querySelector('.header');
