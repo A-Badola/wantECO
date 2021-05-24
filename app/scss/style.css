@@ -506,6 +506,70 @@ button:hover::before, .button:hover::before {
   font-size: 0.8125rem;
 }
 
+.tagsTale {
+  width: 100%;
+  padding: 5px 2px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 64em) {
+  .tagsTale {
+    padding: 30px 30px;
+  }
+}
+.tagsTale #searchTags::-webkit-scrollbar {
+  display: none;
+}
+.tagsTale #searchTags {
+  width: 100%;
+  padding: 5px 0px;
+  white-space: nowrap;
+  scrollbar-width: none;
+  overflow-x: scroll;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: left;
+  margin: 10px 100px;
+}
+@media (min-width: 40em) {
+  .tagsTale #searchTags {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .tagsTale #searchTags {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.tagsTale #searchTags button:not(#pledge) {
+  width: max-content;
+  font-size: 0.725rem;
+  text-align: center;
+  margin: 0px 5px;
+  background: #d5d5d5;
+  color: #202237;
+}
+@media (min-width: 64em) {
+  .tagsTale #searchTags button:not(#pledge) {
+    font-size: 0.825rem;
+    margin: 0px 10px;
+  }
+}
+.tagsTale button:not(#pledge):active {
+  font-size: 1rem;
+}
+.tagsTale button:not(#pledge):hover {
+  transition: border 300ms ease-in-out;
+}
+.tagsTale__tagnames {
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #about {
   font-weight: bold;
 }

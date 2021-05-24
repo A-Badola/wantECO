@@ -27,7 +27,7 @@
      </div>
      <div class="footer__cta">
       <?php if(!(isset($_SESSION['id']))){ ?>
-       <a href="#" class="button">join us</a>
+       <a href="?page=join" class="button">join us</a>
       <?php  }  ?>   
      </div>
      <div class="footer__copyright">
@@ -47,6 +47,6 @@
   <script src="app/js/script.js"></script>
   <script src="app/js/slider.js"></script>
   <script src="app/js/taggedList.js"></script>
-    <?php include("ajax.php"); ?> 
+  <?php include("ajax.php"); ?> 
 </body>
 </html>
